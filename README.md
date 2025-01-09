@@ -12,7 +12,7 @@ Simple & light is designed to provide all the basic components using the `sx` pr
 
 ## Live Demo
 
-Take a look the live demo here 👉 [https://coursespace.vercel.app/](https://coursespace.vercel.app/)
+Take a look the live demo here 👉 [https://growth-silk.vercel.app/](https://growth-silk.vercel.app/)
 
 ## Getting Started
 
