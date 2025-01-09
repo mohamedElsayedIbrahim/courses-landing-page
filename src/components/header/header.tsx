@@ -1,12 +1,12 @@
-import React, { FC, useState } from 'react'
+import { Logo } from '@/components/logo'
+import { Navigation } from '@/components/navigation'
+import { Close, Menu } from '@mui/icons-material'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 import IconButton from '@mui/material/IconButton'
-import useMediaQuery from '@mui/material/useMediaQuery'
-import { Logo } from '@/components/logo'
-import { Navigation, AuthNavigation } from '@/components/navigation'
 import { useTheme } from '@mui/material/styles'
-import { Menu, Close } from '@mui/icons-material'
+import useMediaQuery from '@mui/material/useMediaQuery'
+import { FC, useState } from 'react'
 
 const Header: FC = () => {
   const [visibleMenu, setVisibleMenu] = useState<boolean>(false)
@@ -45,7 +45,7 @@ const Header: FC = () => {
           >
             <Box /> {/* Magic space */}
             <Navigation />
-            <AuthNavigation />
+            {/* <AuthNavigation /> Not Required for now */}
             {visibleMenu && matchMobileView && (
               <IconButton
                 sx={{

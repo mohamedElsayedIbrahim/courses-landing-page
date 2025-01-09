@@ -1,14 +1,14 @@
-import React, { FC } from 'react'
-import Box from '@mui/material/Box'
-import Slider, { Settings } from 'react-slick'
-import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
-import IconButton from '@mui/material/IconButton'
-import useMediaQuery from '@mui/material/useMediaQuery'
-import { useTheme, styled } from '@mui/material/styles'
+import { MentorCardItem } from '@/components/mentor'
 import IconArrowBack from '@mui/icons-material/ArrowBack'
 import IconArrowForward from '@mui/icons-material/ArrowForward'
-import { MentorCardItem } from '@/components/mentor'
+import Box from '@mui/material/Box'
+import Container from '@mui/material/Container'
+import IconButton from '@mui/material/IconButton'
+import { styled, useTheme } from '@mui/material/styles'
+import Typography from '@mui/material/Typography'
+import useMediaQuery from '@mui/material/useMediaQuery'
+import { FC } from 'react'
+import Slider, { Settings } from 'react-slick'
 import { data } from './mentors.data'
 
 interface SliderArrowArrow {
@@ -88,7 +88,7 @@ const HomeOurMentors: FC = () => {
           xs: 8,
           md: 12,
         },
-        backgroundColor: '#ecf3f3',
+        backgroundColor: 'background.default',
       }}
     >
       <Container maxWidth="lg">
