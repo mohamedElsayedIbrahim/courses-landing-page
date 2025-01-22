@@ -1,14 +1,14 @@
-import React, { FC, useRef } from 'react'
-import Image from 'next/image'
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-import Slider, { Settings } from 'react-slick'
-import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
-import IconButton from '@mui/material/IconButton'
-import { styled } from '@mui/material/styles'
 import IconArrowBack from '@mui/icons-material/ArrowBack'
 import IconArrowForward from '@mui/icons-material/ArrowForward'
+import Box from '@mui/material/Box'
+import Container from '@mui/material/Container'
+import Grid from '@mui/material/Grid'
+import IconButton from '@mui/material/IconButton'
+import { styled } from '@mui/material/styles'
+import Typography from '@mui/material/Typography'
+import Image from 'next/image'
+import { FC, useRef } from 'react'
+import Slider, { Settings } from 'react-slick'
 
 import { TestimonialItem } from '@/components/testimonial'
 import { data } from './testimonial.data'
@@ -115,7 +115,7 @@ const HomeTestimonial: FC = () => {
           </Grid>
           <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
             <Box sx={{ width: { xs: '100%', md: '90%' } }}>
-              <Image src="/images/home-testimonial.png" width={520} height={540} quality={97} alt="Testimonial img" />
+              <Image src="/images/home-testimonial.webp" width={520} height={540} quality={97} alt="Testimonial img" />
             </Box>
           </Grid>
         </Grid>
