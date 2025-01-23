@@ -1,4 +1,9 @@
 import { StyledButton } from '@/components/styled-button'
+import { locales } from '@/enums/Locales'
+import useChangeLanguage from '@/hooks/useChangeLanguage'
+
+import useTranslate from '@/hooks/useTranslate'
+import { Translation } from '@/interfaces/translations'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
@@ -9,7 +14,7 @@ import { FC } from 'react'
 import { Link as ScrollLink } from 'react-scroll'
 
 interface Exp {
-  label: string
+  label: Translation
   value: string
 }
 interface ExpItemProps {
@@ -18,21 +23,23 @@ interface ExpItemProps {
 
 const exps: Array<Exp> = [
   {
-    label: 'Students',
+    label: 'home.hero.experience.students',
     value: '10K+',
   },
   {
-    label: 'Quality Course',
+    label: 'home.hero.experience.qualityCourse',
     value: '20+',
   },
   {
-    label: 'Experience Mentors',
+    label: 'home.hero.experience.experienceMentors',
     value: '10+',
   },
 ]
 
 const ExpItem: FC<ExpItemProps> = ({ item }) => {
   const { value, label } = item
+  const translate = useTranslate()
+
   return (
     <Box sx={{ textAlign: 'center', mb: { xs: 1, md: 0 } }}>
       <Typography
@@ -41,13 +48,16 @@ const ExpItem: FC<ExpItemProps> = ({ item }) => {
         {value}
       </Typography>
       <Typography color="text.secondary" variant="h5">
-        {label}
+        {translate(label)}
       </Typography>
     </Box>
   )
 }
 
 const HomeHero: FC = () => {
+  const translate = useTranslate()
+  const { setCurrentLocale } = useChangeLanguage()
+
   return (
     <Box id="hero" sx={{ backgroundColor: 'background.paper', position: 'relative', pt: 4, pb: { xs: 8, md: 10 } }}>
       <Container maxWidth="lg">
@@ -83,7 +93,7 @@ const HomeHero: FC = () => {
                       backgroundColor: 'unset',
                     }}
                   >
-                    Improve{' '}
+                    {translate('home.hero.headline.improve')}
                     <Box
                       sx={{
                         position: 'absolute',
@@ -97,7 +107,7 @@ const HomeHero: FC = () => {
                       <img src="/images/headline-curve.svg" alt="Headline curve" />
                     </Box>
                   </Typography>
-                  your{' '}
+                  {translate('home.hero.headline.skill')}
                   <Typography
                     component="span"
                     sx={{
@@ -113,7 +123,6 @@ const HomeHero: FC = () => {
                       },
                     }}
                   >
-                    Skill
                     <svg version="1.1" viewBox="0 0 3183 3072">
                       <g id="Layer_x0020_1">
                         <path
@@ -132,32 +141,43 @@ const HomeHero: FC = () => {
                     </svg>
                   </Typography>{' '}
                   <br />
-                  with Different Way
+                  {translate('home.hero.headline.withDifferentWay')}
                 </Typography>
               </Box>
               <Box sx={{ mb: 4, width: { xs: '100%', md: '70%' } }}>
                 <Typography sx={{ color: 'text.secondary', lineHeight: 1.6 }}>
-                  {
-                    "Let's take an online course to improve your skills in a different way, you can set your own study time according to your learning speed. So you san study comfortable and absorb tge material easily."
-                  }
+                  {translate('home.hero.description')}
                 </Typography>
               </Box>
               <Box sx={{ '& button': { mr: 2 } }}>
+                {locales.map((locale) => (
+                  <StyledButton
+                    key={locale.code}
+                    onClick={() => {
+                      setCurrentLocale(locale)
+                    }}
+                    color="primary"
+                    size="large"
+                    variant="contained"
+                  >
+                    {locale.name}
+                  </StyledButton>
+                ))}
                 <ScrollLink to="popular-course" spy={true} smooth={true} offset={0} duration={350}>
                   <StyledButton color="primary" size="large" variant="contained">
-                    Get Started
+                    {translate('home.hero.buttons.getStarted')}
                   </StyledButton>
                 </ScrollLink>
                 <ScrollLink to="video-section" spy={true} smooth={true} offset={0} duration={350}>
                   <StyledButton color="primary" size="large" variant="outlined" startIcon={<PlayArrowIcon />}>
-                    Watch Video
+                    {translate('home.hero.buttons.watchVideo')}
                   </StyledButton>
                 </ScrollLink>
               </Box>
             </Box>
           </Grid>
           <Grid item xs={12} md={5} sx={{ position: 'relative' }}>
-            {/* Sertificate badge */}
+            {/* Certificate Badge */}
             <Box
               sx={{
                 position: 'absolute',
@@ -194,10 +214,10 @@ const HomeHero: FC = () => {
                   component="h6"
                   sx={{ color: 'secondary.main', fontSize: '1.1rem', fontWeight: 700, mb: 0.5 }}
                 >
-                  Certificate
+                  {translate('home.hero.certificate.title')}
                 </Typography>
                 <Typography variant="subtitle1" sx={{ color: 'text.secondary', lineHeight: 1.3 }}>
-                  There are certificates for all courses.
+                  {translate('home.hero.certificate.description')}
                 </Typography>
               </Box>
             </Box>
