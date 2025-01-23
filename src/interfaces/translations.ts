@@ -1,4 +1,4 @@
-import { en } from 'src/locale'
+import { en } from '@/locale/en'
 
 export interface Translations {
   [key: string]: string | Translations

@@ -1,6 +1,7 @@
 import useStore from '@/hooks/useStore'
 import { AllTranslationKeys, I18nContextType, Translations } from '@/interfaces/translations'
-import { ar, en } from '@/locale'
+import { ar } from '@/locale/ar'
+import { en } from '@/locale/en'
 import { createContext, FC, ReactNode, useCallback, useMemo } from 'react'
 
 const translations: Record<string, Translations> = {

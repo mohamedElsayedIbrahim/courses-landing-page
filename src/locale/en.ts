@@ -32,12 +32,30 @@ export const en = {
       mobileDev: 'Mobile Development',
       webDev: 'Web Development',
       statsTitle: 'Statistics',
-      statsSubtitle: 'There are many variations of passages of Lorem Ipsum available',
+      statsSubtitle: 'There are many variations of passages available',
       headlinePart1: 'Make your',
       headlinePart2: 'Learning',
       headlinePart3: 'Enjoyable',
       description:
         ' Set the way of learning according to your wishes with some of the benefits that you get us, so you on enjoy the lessons that we provide.',
+      cards: {
+        card1: {
+          title: 'Easy Accessible',
+          description: 'You can access content easily from anywhere and at any time.',
+        },
+        card2: {
+          title: 'More Affordable Cost',
+          description: 'We offer a low cost for all the benefits you receive with us.',
+        },
+        card3: {
+          title: 'Flexible Study Time',
+          description: 'Set study hours that suit you without any time constraints or pressure.',
+        },
+        card4: {
+          title: 'Consultation With Mentor',
+          description: 'Enjoy continuous support from specialized mentors throughout the learning process.',
+        },
+      },
     },
   },
 }

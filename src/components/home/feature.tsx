@@ -1,3 +1,4 @@
+import useTranslate from '@/hooks/useTranslate'
 import Box from '@mui/material/Box'
 import CircularProgress from '@mui/material/CircularProgress'
 import Container from '@mui/material/Container'
@@ -36,6 +37,8 @@ const BorderLinearProgress = styled(LinearProgress, {
 }))
 
 const HomeFeature: FC = () => {
+  const translate = useTranslate()
+
   return (
     <Box id="feature" sx={{ py: { xs: 10, md: 14 }, backgroundColor: 'background.paper' }}>
       <Container>
@@ -58,23 +61,23 @@ const HomeFeature: FC = () => {
                 }}
               >
                 <Typography variant="h5" sx={{ mb: 1 }}>
-                  Lorem ipsum dolor
+                  {translate('home.feature.sectionTitle')}
                 </Typography>
                 <Box sx={{ mb: 2 }}>
                   <Typography variant="subtitle1" color="text.secondary">
-                    UI/UI Design
+                    {translate('home.feature.designUiUx')}
                   </Typography>
                   <BorderLinearProgress variant="determinate" color="inherit" value={65} order={1} />
                 </Box>
                 <Box sx={{ mb: 2 }}>
                   <Typography variant="subtitle1" color="text.secondary">
-                    Mobile Development
+                    {translate('home.feature.mobileDev')}
                   </Typography>
                   <BorderLinearProgress variant="determinate" color="inherit" value={40} order={2} />
                 </Box>
                 <Box sx={{ mb: 2 }}>
                   <Typography variant="subtitle1" color="text.secondary">
-                    Web Development
+                    {translate('home.feature.webDev')}
                   </Typography>
                   <BorderLinearProgress variant="determinate" color="inherit" value={50} order={3} />
                 </Box>
@@ -103,9 +106,11 @@ const HomeFeature: FC = () => {
                     flexDirection: 'column',
                   }}
                 >
-                  <Typography sx={{ fontWeight: 600, lineHeight: 1 }}>Lorem ipsum</Typography>
+                  <Typography sx={{ fontWeight: 600, lineHeight: 1 }}>
+                    {translate('home.feature.statsTitle')}
+                  </Typography>
                   <Typography variant="subtitle1" sx={{ mb: 1, color: 'text.disabled' }}>
-                    Lorem ipsum
+                    {translate('home.feature.statsSubtitle')}
                   </Typography>
                   <Box
                     sx={{
@@ -153,7 +158,7 @@ const HomeFeature: FC = () => {
                 fontWeight: 'bold',
               }}
             >
-              Make your{' '}
+              {translate('home.feature.headlinePart1')}{' '}
               <Typography
                 component="mark"
                 sx={{
@@ -164,7 +169,7 @@ const HomeFeature: FC = () => {
                   backgroundColor: 'unset',
                 }}
               >
-                Learning <br />
+                {translate('home.feature.headlinePart2')} <br />
                 <Box
                   sx={{
                     position: 'absolute',
@@ -178,12 +183,11 @@ const HomeFeature: FC = () => {
                   <img src="/images/headline-curve.svg" alt="Headline curve" />
                 </Box>
               </Typography>
-              Enjoyable
+              {translate('home.feature.headlinePart3')}
             </Typography>
 
             <Typography sx={{ color: 'text.secondary', mb: 2, ml: { xs: 0, md: 4 } }}>
-              Set the way of learning according to your wishes with some of the benefits that you get us, so you on
-              enjoy the lessons that we provide.
+              {translate('home.feature.description')}
             </Typography>
 
             <Grid container spacing={2} sx={{ ml: { xs: 0, md: 2 } }}>
@@ -210,10 +214,10 @@ const HomeFeature: FC = () => {
                     </Box>
                     <Box sx={{ display: 'flex', flex: 1, flexDirection: 'column' }}>
                       <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1, color: 'secondary.main' }}>
-                        {title}
+                        {translate(title)}
                       </Typography>
                       <Typography sx={{ lineHeight: 1.3, color: 'text.secondary' }} variant="subtitle1">
-                        {description}
+                        {translate(description)}
                       </Typography>
                     </Box>
                   </Box>
