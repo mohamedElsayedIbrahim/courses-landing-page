@@ -2,7 +2,7 @@ import useTranslate from '@/hooks/useTranslate'
 import Box from '@mui/material/Box'
 import CircularProgress from '@mui/material/CircularProgress'
 import Container from '@mui/material/Container'
-import Grid from '@mui/material/Grid'
+import Grid2 from '@mui/material/Grid2'
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress'
 import { styled } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
@@ -42,10 +42,10 @@ const HomeFeature: FC = () => {
   return (
     <Box id="feature" sx={{ py: { xs: 10, md: 14 }, backgroundColor: 'background.paper' }}>
       <Container>
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={5}>
+        <Grid2 container spacing={3}>
+          <Grid2 size={{ xs: 12, md: 5 }}>
             <Box sx={{ position: 'relative' }}>
-              <Image src="/images/home-feature.webp" width={650} height={678} quality={97} alt="Feature img" />
+              <Image src="/images/home-feature.webp" width={450} height={470} quality={97} alt="Feature img" />
               <Box
                 sx={{
                   position: 'absolute',
@@ -144,8 +144,8 @@ const HomeFeature: FC = () => {
                 </Box>
               </Box>
             </Box>
-          </Grid>
-          <Grid item xs={12} md={7}>
+          </Grid2>
+          <Grid2 size={{ xs: 12, md: 7 }}>
             <Typography
               component="h2"
               sx={{
@@ -190,9 +190,9 @@ const HomeFeature: FC = () => {
               {translate('home.feature.description')}
             </Typography>
 
-            <Grid container spacing={2} sx={{ ml: { xs: 0, md: 2 } }}>
+            <Grid2 container spacing={2} sx={{ ml: { xs: 0, md: 2 } }}>
               {data.map(({ title, description, icon }, index) => (
-                <Grid key={String(index)} item xs={12} md={6}>
+                <Grid2 key={String(index)} size={{ xs: 12, md: 6 }}>
                   <Box sx={{ px: 2, py: 1.5, boxShadow: 1, borderRadius: 4, display: 'flex', alignItems: 'center' }}>
                     <Box
                       sx={{
@@ -221,11 +221,11 @@ const HomeFeature: FC = () => {
                       </Typography>
                     </Box>
                   </Box>
-                </Grid>
+                </Grid2>
               ))}
-            </Grid>
-          </Grid>
-        </Grid>
+            </Grid2>
+          </Grid2>
+        </Grid2>
       </Container>
     </Box>
   )

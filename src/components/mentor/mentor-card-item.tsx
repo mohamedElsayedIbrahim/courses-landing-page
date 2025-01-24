@@ -1,7 +1,7 @@
-import React, { FC } from 'react'
-import Image from 'next/image'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
+import Image from 'next/image'
+import { FC } from 'react'
 
 import { Mentor } from '@/interfaces/mentor'
 
@@ -37,7 +37,7 @@ const MentorCardItem: FC<Props> = ({ item }) => {
             mb: 2,
           }}
         >
-          <Image src={item.photo as string} width={570} height={427} alt={'Mentor ' + item.id} />
+          <Image src={item.photo as string} width={330} height={250} quality={97} alt={'Mentor ' + item.id} />
         </Box>
         <Box sx={{ mb: 2 }}>
           <Typography component="h2" variant="h4" sx={{ fontSize: '1.4rem' }}>

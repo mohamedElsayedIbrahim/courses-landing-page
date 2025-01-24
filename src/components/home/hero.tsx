@@ -7,7 +7,7 @@ import { Translation } from '@/interfaces/translations'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
-import Grid from '@mui/material/Grid'
+import Grid2 from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 import Image from 'next/image'
 import { FC } from 'react'
@@ -61,8 +61,8 @@ const HomeHero: FC = () => {
   return (
     <Box id="hero" sx={{ backgroundColor: 'background.paper', position: 'relative', pt: 4, pb: { xs: 8, md: 10 } }}>
       <Container maxWidth="lg">
-        <Grid container spacing={0} sx={{ flexDirection: { xs: 'column', md: 'unset' } }}>
-          <Grid item xs={12} md={7}>
+        <Grid2 container spacing={0} sx={{ flexDirection: { xs: 'column', md: 'unset' } }}>
+          <Grid2 size={{ xs: 12, md: 7 }}>
             <Box
               sx={{
                 textAlign: { xs: 'center', md: 'left' },
@@ -93,7 +93,7 @@ const HomeHero: FC = () => {
                       backgroundColor: 'unset',
                     }}
                   >
-                    {translate('home.hero.headline.improve')}
+                    {translate('home.hero.headline.improve')}{' '}
                     <Box
                       sx={{
                         position: 'absolute',
@@ -175,8 +175,8 @@ const HomeHero: FC = () => {
                 </ScrollLink>
               </Box>
             </Box>
-          </Grid>
-          <Grid item xs={12} md={5} sx={{ position: 'relative' }}>
+          </Grid2>
+          <Grid2 size={{ xs: 12, md: 5 }} sx={{ position: 'relative' }}>
             {/* Certificate Badge */}
             <Box
               sx={{
@@ -222,20 +222,20 @@ const HomeHero: FC = () => {
               </Box>
             </Box>
             <Box sx={{ lineHeight: 0 }}>
-              <Image src="/images/home-hero.webp" width={775} height={787} alt="Hero img" />
+              <Image src="/images/home-hero.webp" fill style={{ objectFit: 'contain' }} alt="Hero img" />
             </Box>
-          </Grid>
-        </Grid>
+          </Grid2>
+        </Grid2>
 
         {/* Experience */}
         <Box sx={{ boxShadow: 2, py: 4, px: 7, borderRadius: 4 }}>
-          <Grid container spacing={2}>
+          <Grid2 container spacing={2}>
             {exps.map((item) => (
-              <Grid key={item.value} item xs={12} md={4}>
+              <Grid2 key={item.value} size={{ xs: 12, md: 4 }}>
                 <ExpItem item={item} />
-              </Grid>
+              </Grid2>
             ))}
-          </Grid>
+          </Grid2>
         </Box>
       </Container>
     </Box>

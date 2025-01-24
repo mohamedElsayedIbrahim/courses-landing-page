@@ -2,7 +2,6 @@ import IconArrowBack from '@mui/icons-material/ArrowBack'
 import IconArrowForward from '@mui/icons-material/ArrowForward'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
-import Grid from '@mui/material/Grid'
 import IconButton from '@mui/material/IconButton'
 import { styled } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
@@ -11,6 +10,7 @@ import { FC, useRef } from 'react'
 import Slider, { Settings } from 'react-slick'
 
 import { TestimonialItem } from '@/components/testimonial'
+import { Grid2 } from '@mui/material'
 import { data } from './testimonial.data'
 
 interface SliderArrowArrow {
@@ -65,8 +65,8 @@ const HomeTestimonial: FC = () => {
   return (
     <Box id="testimonial" sx={{ pb: { xs: 6, md: 10 }, backgroundColor: 'background.paper' }}>
       <Container>
-        <Grid container spacing={5}>
-          <Grid item xs={12} md={6}>
+        <Grid2 container spacing={5}>
+          <Grid2 size={{ xs: 12, md: 6 }}>
             <Typography
               component="h2"
               sx={{
@@ -112,13 +112,13 @@ const HomeTestimonial: FC = () => {
                 ))}
               </Slider>
             </StyledSlickContainer>
-          </Grid>
-          <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
+          </Grid2>
+          <Grid2 size={{ xs: 12, md: 6 }} sx={{ display: { xs: 'none', md: 'block' } }}>
             <Box sx={{ width: { xs: '100%', md: '90%' } }}>
               <Image src="/images/home-testimonial.webp" width={520} height={540} quality={97} alt="Testimonial img" />
             </Box>
-          </Grid>
-        </Grid>
+          </Grid2>
+        </Grid2>
       </Container>
     </Box>
   )

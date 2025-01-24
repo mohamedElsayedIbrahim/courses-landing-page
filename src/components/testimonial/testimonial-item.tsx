@@ -1,8 +1,8 @@
-import React, { FC } from 'react'
-import Image from 'next/image'
+import { Testimonial } from '@/interfaces/testimonial'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import { Testimonial } from '@/interfaces/testimonial'
+import Image from 'next/image'
+import { FC } from 'react'
 
 interface Props {
   item: Testimonial
@@ -43,13 +43,7 @@ const TestimonialItem: FC<Props> = ({ item }) => {
             },
           }}
         >
-          <Image
-            src={`/images/avatars/${item.user.photo}`}
-            width={100}
-            height={100}
-            quality={97}
-            alt={item.user.name}
-          />
+          <Image src={`/images/avatars/${item.user.photo}`} width={52} height={52} quality={97} alt={item.user.name} />
         </Box>
         <Box>
           <Typography variant="h6">{item.user.name}</Typography>

@@ -1,11 +1,11 @@
-import React, { FC } from 'react'
-import Image from 'next/image'
+import { Course } from '@/interfaces/course'
+import ArrowForward from '@mui/icons-material/ArrowForward'
 import Box from '@mui/material/Box'
+import IconButton, { iconButtonClasses } from '@mui/material/IconButton'
 import Rating from '@mui/material/Rating'
 import Typography from '@mui/material/Typography'
-import IconButton, { iconButtonClasses } from '@mui/material/IconButton'
-import ArrowForward from '@mui/icons-material/ArrowForward'
-import { Course } from '@/interfaces/course'
+import Image from 'next/image'
+import { FC } from 'react'
 
 interface Props {
   item: Course
@@ -43,7 +43,7 @@ const CourseCardItem: FC<Props> = ({ item }) => {
             mb: 2,
           }}
         >
-          <Image src={item.cover} width={760} height={760} alt={'Course ' + item.id} />
+          <Image src={item.cover} width={240} height={240} alt={'Course ' + item.id} />
         </Box>
         <Box sx={{ mb: 2 }}>
           <Typography component="h2" variant="h5" sx={{ mb: 2, height: 56, overflow: 'hidden', fontSize: '1.2rem' }}>
