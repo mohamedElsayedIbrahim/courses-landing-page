@@ -93,7 +93,7 @@ const HomeHero: FC = () => {
                       backgroundColor: 'unset',
                     }}
                   >
-                    {translate('home.hero.headline.improve')}{' '}
+                    {translate('home.hero.headlinePart1')}{' '}
                     <Box
                       sx={{
                         position: 'absolute',
@@ -107,7 +107,7 @@ const HomeHero: FC = () => {
                       <img src="/images/headline-curve.svg" alt="Headline curve" />
                     </Box>
                   </Typography>
-                  {translate('home.hero.headline.skill')}
+                  {translate('home.hero.headlinePart2')}
                   <Typography
                     component="span"
                     sx={{
@@ -141,7 +141,7 @@ const HomeHero: FC = () => {
                     </svg>
                   </Typography>{' '}
                   <br />
-                  {translate('home.hero.headline.withDifferentWay')}
+                  {translate('home.hero.headlinePart3')}
                 </Typography>
               </Box>
               <Box sx={{ mb: 4, width: { xs: '100%', md: '70%' } }}>

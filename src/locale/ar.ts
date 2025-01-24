@@ -1,15 +1,9 @@
 export const ar = {
-  mode: {
-    dark: 'الوضع الداكن',
-    light: 'الوضع الفاتح',
-  },
   home: {
     hero: {
-      headline: {
-        improve: 'طور',
-        skill: 'مهاراتك',
-        withDifferentWay: 'بطريقة مختلفة',
-      },
+      headlinePart1: 'طور',
+      headlinePart2: 'مهاراتك',
+      headlinePart3: 'بطريقة مختلفة',
       description:
         'دعنا نأخذ دورة تدريبية عبر الإنترنت لتحسين مهاراتك بطريقة مختلفة. يمكنك تحديد وقت الدراسة الخاص بك وفقًا لسرعتك في التعلم، حتى تتمكن من الدراسة براحة وامتصاص المادة بسهولة.',
       buttons: {
@@ -23,7 +17,7 @@ export const ar = {
       experience: {
         students: 'طلاب',
         qualityCourse: 'دورات عالية الجودة',
-        experienceMentors: 'مرشدون بخبرة',
+        experienceMentors: 'موجهون بخبرة',
       },
     },
     feature: {
@@ -52,9 +46,60 @@ export const ar = {
           description: 'حدد أوقات الدراسة التي تناسبك دون قيود أو ضغوط زمنية.',
         },
         card4: {
-          title: 'استشارة مع مرشد',
+          title: 'استشارة مع موجهون',
           description: 'دعم مستمر من خبراء متخصصين أثناء التعلم.',
         },
+      },
+    },
+    popularCourses: {
+      headline: 'الدورات الاكثر شهرة',
+    },
+    testimonial: {
+      headlinePart1: 'اراء ما يقوله',
+      headlinePart2: 'طلابنا',
+      headlinePart3: 'عنا',
+    },
+    mentors: {
+      headline: 'الموجهون الخبراء لدينا',
+    },
+    newsLetter: {
+      headline: 'اشترك في نشرتنا الإخبارية',
+      description: 'اشترك في نشرتنا الإخبارية للحصول على معلومات حول دوراتنا.',
+      inputs: {
+        email: 'أدخل عنوان بريدك الإلكتروني',
+      },
+      buttons: {
+        subscribe: 'اشترك',
+      },
+    },
+  },
+  layout: {
+    navigations: {
+      home: 'الرئيسية',
+      courses: 'الدورات',
+      testimonial: 'آراء الطلاب',
+      mentors: 'المرشدون',
+    },
+
+    footer: {
+      headlines: {
+        course: 'الدورة',
+        menu: 'القائمة',
+        about: 'نبذة عنا',
+      },
+
+      overview: {
+        description: 'جروث ليفل هي منصة تعليمية عبر الإنترنت تعمل منذ عام 2018 حتى الآن.',
+      },
+      navigation: {
+        designUiUx: 'تصميم واجهات وتجربة المستخدم',
+        mobileDev: 'تطوير تطبيقات الجوال',
+        webDev: 'تطوير الويب',
+        machineLearning: 'تعلم الآلة',
+        contactUs: 'تواصل معنا',
+        Privacy: 'الخصوصية والسياسة',
+        Term: 'الشروط والأحكام',
+        faq: 'الأسئلة الشائعة',
       },
     },
   },

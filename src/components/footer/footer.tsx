@@ -1,4 +1,5 @@
 import { FooterNavigation, FooterSocialLinks } from '@/components/footer'
+import useTranslate from '@/hooks/useTranslate'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 import Grid2 from '@mui/material/Grid2'
@@ -7,6 +8,8 @@ import Image from 'next/image'
 import { FC } from 'react'
 
 const Footer: FC = () => {
+  const translate = useTranslate()
+
   return (
     <Box
       component="footer"
@@ -20,7 +23,7 @@ const Footer: FC = () => {
                 <Image src="/images/logo-white.webp" width={150} height={29} alt="Logo" />
               </Box>
               <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 2 }}>
-                Coursespace is an online learning platform that has been operating since 2018 until now.
+                {translate('layout.footer.overview.description')}
               </Typography>
               <FooterSocialLinks />
             </Box>

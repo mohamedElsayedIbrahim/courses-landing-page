@@ -1,15 +1,9 @@
 export const en = {
-  mode: {
-    dark: 'Dark Mode',
-    light: 'Light Mode',
-  },
   home: {
     hero: {
-      headline: {
-        improve: 'Improve',
-        skill: 'Skill',
-        withDifferentWay: 'with Different Way',
-      },
+      headlinePart1: 'Improve',
+      headlinePart2: 'Skill',
+      headlinePart3: 'with Different Way',
       description:
         "Let's take an online course to improve your skills in a different way, you can set your own study time according to your learning speed. So you can study comfortably and absorb the material easily.",
       buttons: {
@@ -55,6 +49,55 @@ export const en = {
           title: 'Consultation With Mentor',
           description: 'Continuous support from expert mentors during learning.',
         },
+      },
+    },
+    popularCourses: {
+      headline: 'Most Popular Courses',
+    },
+    testimonial: {
+      headlinePart1: 'Testimonial What our',
+      headlinePart2: 'Students',
+      headlinePart3: 'Say',
+    },
+    mentors: {
+      headline: 'Our Expert Mentors',
+    },
+    newsLetter: {
+      headline: 'Subscribe to Our News Letter',
+      description: 'Subscribe to our newsletter to get information about our courses.',
+      inputs: {
+        email: 'Enter your Email Address',
+      },
+      buttons: {
+        subscribe: 'Subscribe',
+      },
+    },
+  },
+  layout: {
+    navigations: {
+      home: 'Home',
+      courses: 'Courses',
+      testimonial: 'Testimonial',
+      mentors: 'Mentors',
+    },
+    footer: {
+      headlines: {
+        course: 'Course',
+        menu: 'Menu',
+        about: 'About',
+      },
+      overview: {
+        description: 'GrowthLevel is an online learning platform that has been operating since 2018 until now.',
+      },
+      navigation: {
+        designUiUx: 'Design UI/UX',
+        mobileDev: 'Mobile Development',
+        webDev: 'Web Development',
+        machineLearning: 'Machine Learning',
+        contactUs: 'Contact Us',
+        Privacy: 'Privacy & Policy',
+        Term: 'Term & Condition',
+        faq: 'FAQ',
       },
     },
   },

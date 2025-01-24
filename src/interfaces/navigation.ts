@@ -1,4 +1,6 @@
+import { Translation } from './translations'
+
 export interface Navigation {
-  label: string
+  label: Translation
   path: string
 }

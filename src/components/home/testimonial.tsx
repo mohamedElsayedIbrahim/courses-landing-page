@@ -7,6 +7,7 @@ import { FC, useRef } from 'react'
 import Slider, { Settings } from 'react-slick'
 
 import { TestimonialItem } from '@/components/testimonial'
+import useTranslate from '@/hooks/useTranslate'
 import { Grid2 } from '@mui/material'
 import SliderArrow from '../slider/slider-arrow'
 import { data } from './testimonial.data'
@@ -19,6 +20,7 @@ const StyledSlickContainer = styled('div')(() => ({
 
 const HomeTestimonial: FC = () => {
   const sliderRef = useRef(null)
+  const translate = useTranslate()
 
   const sliderConfig: Settings = {
     infinite: true,
@@ -47,7 +49,7 @@ const HomeTestimonial: FC = () => {
                 fontWeight: 'bold',
               }}
             >
-              Testimonial What our{' '}
+              {translate('home.testimonial.headlinePart1')}{' '}
               <Typography
                 component="mark"
                 sx={{
@@ -58,7 +60,7 @@ const HomeTestimonial: FC = () => {
                   backgroundColor: 'unset',
                 }}
               >
-                Students{' '}
+                {translate('home.testimonial.headlinePart2')}{' '}
                 <Box
                   sx={{
                     position: 'absolute',
@@ -71,7 +73,7 @@ const HomeTestimonial: FC = () => {
                   <img src="/images/headline-curve.svg" alt="Headline curve" />
                 </Box>
               </Typography>
-              Say
+              {translate('home.testimonial.headlinePart3')}
             </Typography>
 
             <StyledSlickContainer>

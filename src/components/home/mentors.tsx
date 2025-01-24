@@ -1,4 +1,5 @@
 import { MentorCardItem } from '@/components/mentor'
+import useTranslate from '@/hooks/useTranslate'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 import { useTheme } from '@mui/material/styles'
@@ -11,6 +12,7 @@ import SliderDot from '../slider/slider-dot'
 import { data } from './mentors.data'
 
 const HomeOurMentors: FC = () => {
+  const translate = useTranslate()
   const { breakpoints } = useTheme()
   const matchMobileView = useMediaQuery(breakpoints.down('md'))
 
@@ -46,7 +48,7 @@ const HomeOurMentors: FC = () => {
     >
       <Container maxWidth="lg">
         <Typography variant="h1" sx={{ fontSize: 40 }}>
-          Our Expert Mentors
+          {translate('home.mentors.headline')}
         </Typography>
 
         <Slider {...sliderConfig}>

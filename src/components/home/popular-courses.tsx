@@ -8,11 +8,13 @@ import { FC } from 'react'
 import Slider, { Settings } from 'react-slick'
 
 import { CourseCardItem } from '@/components/course'
+import useTranslate from '@/hooks/useTranslate'
 import SliderArrow from '../slider/slider-arrow'
 import SliderDot from '../slider/slider-dot'
 import { data } from './popular-course.data'
 
 const HomePopularCourse: FC = () => {
+  const translate = useTranslate()
   const { breakpoints } = useTheme()
   const matchMobileView = useMediaQuery(breakpoints.down('md'))
 
@@ -56,7 +58,7 @@ const HomePopularCourse: FC = () => {
               }}
             >
               <Typography variant="h1" sx={{ mt: { xs: 0, md: -5 }, fontSize: { xs: 30, md: 48 } }}>
-                Most Popular Courses
+                {translate('home.popularCourses.headline')}
               </Typography>
             </Box>
           </Grid2>

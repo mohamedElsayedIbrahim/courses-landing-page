@@ -1,3 +1,4 @@
+import useTranslate from '@/hooks/useTranslate'
 import Box from '@mui/material/Box'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -5,6 +6,8 @@ import { FC } from 'react'
 import { navigations } from './navigation.data'
 
 const Navigation: FC = () => {
+  const translate = useTranslate()
+
   return (
     <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' } }}>
       {navigations.map(({ path: destination, label }) => (
@@ -47,7 +50,7 @@ const Navigation: FC = () => {
             >
               <Image height={44} width={44} src="/images/headline-curve.svg" alt="Headline curve" />
             </Box>
-            {label}
+            {translate(label)}
           </Box>
         </Link>
       ))}
