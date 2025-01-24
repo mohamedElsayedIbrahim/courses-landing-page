@@ -53,7 +53,7 @@ export const en = {
         },
         card4: {
           title: 'Consultation With Mentor',
-          description: 'Enjoy continuous support from specialized mentors throughout the learning process.',
+          description: 'Continuous support from expert mentors during learning.',
         },
       },
     },

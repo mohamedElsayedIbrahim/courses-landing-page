@@ -15,6 +15,7 @@ const MentorCardItem: FC<Props> = ({ item }) => {
       sx={{
         px: 1.5,
         py: 5,
+        direction: 'ltr',
       }}
     >
       <Box

@@ -1,8 +1,8 @@
-import React, { FC } from 'react'
 import Box from '@mui/material/Box'
-import InputBase from '@mui/material/InputBase'
 import Container from '@mui/material/Container'
+import InputBase from '@mui/material/InputBase'
 import Typography from '@mui/material/Typography'
+import { FC } from 'react'
 import { StyledButton } from '../styled-button'
 
 const HomeNewsLetter: FC = () => {
@@ -46,7 +46,7 @@ const HomeNewsLetter: FC = () => {
               placeholder="Enter your Email Address"
             />
             <Box>
-              <StyledButton disableHoverEffect size="large">
+              <StyledButton variant="contained" color="primary" size="large">
                 Subscribe
               </StyledButton>
             </Box>

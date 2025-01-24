@@ -17,6 +17,7 @@ const CourseCardItem: FC<Props> = ({ item }) => {
       sx={{
         px: 1,
         py: 4,
+        direction: 'ltr',
       }}
     >
       <Box

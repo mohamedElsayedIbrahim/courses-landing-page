@@ -1,4 +1,4 @@
-import useStore from '@/hooks/useStore'
+import useChangeLanguage from '@/hooks/useChangeLanguage'
 import { AllTranslationKeys, I18nContextType, Translations } from '@/interfaces/translations'
 import { ar } from '@/locale/ar'
 import { en } from '@/locale/en'
@@ -16,7 +16,7 @@ interface Props {
 }
 
 const I18nProvider: FC<Props> = ({ children }) => {
-  const { localeCode } = useStore()
+  const { localeCode } = useChangeLanguage()
   const translate = useCallback(
     (key: AllTranslationKeys, params: { [s: string]: unknown } | ArrayLike<unknown> = {}) => {
       const keys = key.split('.')

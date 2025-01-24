@@ -222,7 +222,7 @@ const HomeHero: FC = () => {
               </Box>
             </Box>
             <Box sx={{ lineHeight: 0 }}>
-              <Image src="/images/home-hero.webp" fill style={{ objectFit: 'contain' }} alt="Hero img" />
+              <Image src="/images/home-hero.webp" width={480} height={490} alt="Hero img" />
             </Box>
           </Grid2>
         </Grid2>

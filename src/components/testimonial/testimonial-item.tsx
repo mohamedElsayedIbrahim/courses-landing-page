@@ -10,7 +10,7 @@ interface Props {
 
 const TestimonialItem: FC<Props> = ({ item }) => {
   return (
-    <Box sx={{ padding: '30px' }}>
+    <Box sx={{ padding: '30px', direction: 'ltr' }}>
       <Box sx={{ mb: 2 }}>
         <Typography component="h2" variant="h4" sx={{ mb: 2 }}>
           {item.title}
