@@ -1,3 +1,4 @@
+import useStore from '@/hooks/useStore'
 import { NextPageWithLayout } from '@/interfaces/layout'
 import { MUIProvider } from '@/providers'
 import I18nProvider from '@/providers/I18nProvider'
@@ -9,12 +10,11 @@ import { CacheProvider } from '@emotion/react'
 import { CssBaseline } from '@mui/material'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import 'slick-carousel/slick/slick.css'
 // import 'slick-carousel/slick/slick-theme.css'
 
 // Client-side cache, shared for the whole session of the user in the browser.
-const clientSideEmotionCache = createEmotionCache()
 
 type AppPropsWithLayout = AppProps & {
   emotionCache: EmotionCache
@@ -22,10 +22,17 @@ type AppPropsWithLayout = AppProps & {
 }
 
 const App: FC<AppPropsWithLayout> = (props: AppPropsWithLayout) => {
-  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
+  const { Component, pageProps } = props
 
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout || ((page) => page)
+
+  const { direction } = useStore()
+  const emotionCache = createEmotionCache(direction)
+
+  useEffect(() => {
+    document.documentElement.setAttribute('dir', direction)
+  }, [direction])
 
   return (
     <CacheProvider value={emotionCache}>
