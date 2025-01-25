@@ -177,7 +177,7 @@ const StyledButton: FC<Props> = (props: Props) => {
   )
 }
 
-StyledButton.defaultProps = {
+StyledButton.prototype = {
   color: 'primary',
   variant: 'contained',
   size: 'medium',
