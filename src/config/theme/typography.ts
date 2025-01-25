@@ -6,6 +6,7 @@ export const fontFamily = [
 
 const headingLineHeight = 1.4
 
+
 const typography: TypographyOptions = {
   fontFamily,
   fontWeightLight: 400,
