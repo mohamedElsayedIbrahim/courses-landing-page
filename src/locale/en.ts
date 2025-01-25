@@ -87,7 +87,7 @@ export const en = {
         about: 'About',
       },
       overview: {
-        description: 'GrowthLevel is an online learning platform that has been operating since 2018 until now.',
+        description: 'GrowthLevel is an online learning platform that has been operating since 2022 until now.',
       },
       navigation: {
         designUiUx: 'Design UI/UX',
